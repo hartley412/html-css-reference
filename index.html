@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML/CSS Reference</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="title">HTML/CSS Reference</h1>
+    <br>
+
+    <!-- Input -->
+    <button class="subtitle collapsible">Input</button>
+    <div class="input-section content">
+        <p>There are many types of input fields. 
+        Every input should be associated with an appropriate label.</p>
+
+        <table class="table">
+            <thead class="table-head">
+                <tr class="table-head-row">
+                    <th class="table-head-data">tag</th>
+                    <th class="table-head-data">name</th>
+                    <th class="table-head-data">description</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;input type="text"&gt;</span></td>
+                    <td class="table-body-data">Text</td>
+                    <td class="table-body-data">Text field (default)</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;input type="number" min="1" max="10"&gt;</span></td>
+                    <td class="table-body-data">Number</td>
+                    <td class="table-body-data">Number field</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;input type="email"&gt;</span></td>
+                    <td class="table-body-data">Email</td>
+                    <td class="table-body-data">Input must be in valid email format</td>
+                </tr>
+
+            </tbody>
+
+        <!-- TODO: date, password, range, checkbox, radio, dropdown-->
+        </table>
+    </div>
+
+    <!-- Tables -->
+    <button class="subtitle collapsible">Tables</button>
+    <div class="table-section content">
+        <h3>Table Tags</h3>
+
+        <table class="table">
+            <thead class="table-head">
+                <tr class="table-head-row">
+                    <th class="table-head-data">tag</th>
+                    <th class="table-head-data">name</th>
+                    <th class="table-head-data">description</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;table&gt;</span></td>
+                    <td class="table-body-data">Table</td>
+                    <td class="table-body-data">Wrapper element for tables</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;thead&gt;</span></td>
+                    <td class="table-body-data">Table Head</td>
+                    <td class="table-body-data">The set of rows defining the column headers in a table.</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;tbody&gt;</span></td>
+                    <td class="table-body-data">Table Body</td>
+                    <td class="table-body-data">The set of rows containing actual table data.</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;tr&gt;</span></td>
+                    <td class="table-body-data">Table Row</td>
+                    <td class="table-body-data">The table row container.</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;td&gt;</span></td>
+                    <td class="table-body-data">Table Data</td>
+                    <td class="table-body-data">The table data container.</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;tfoot&gt;</span></td>
+                    <td class="table-body-data">Table Footer</td>
+                    <td class="table-body-data">The set of rows defining the footer in a table.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h3>Table Attributes</h3>
+
+        <table class="table">
+            <thead class="table-head">
+                <tr class="table-head-row">
+                    <th class="table-head-data">attribute</th>
+                    <th class="table-head-data">name</th>
+                    <th class="table-head-data">description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;colspan&gt;</span></td>
+                    <td class="table-body-data">Column Span</td>
+                    <td class="table-body-data">Defines how many columns a td element should span.</td>
+                </tr>
+                <tr>
+                    <td class="table-body-data"><span class="code">&lt;rowspan&gt;</span></td>
+                    <td class="table-body-data">Row Span</td>
+                    <td class="table-body-data">Defines how many rows a td element should span.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- TODO: Section on CSS font-weights -->
+    <!-- TODO: Section on CSS border-radius -->
+
+    <!--
+        JavaScript for collapsible content
+        Source: https://www.w3schools.com/howto/howto_js_collapsible.asp
+    -->
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+* {
+    background-color: rosybrown;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.active, .collapsible:hover {
+    border: 2px sienna solid;
+    background-color: peachpuff;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.title {
+    font-weight: bold;
+    color: papayawhip;
+    background-color: sienna;
+    border-radius: 25px;
+    display: inline-flex;
+    padding: 20px;
+}
+
+.subtitle {
+    color: sienna;
+    background-color: papayawhip;
+    border-radius: 25px;
+    display: inline-flex;
+    padding: 10px;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
+    display: block;
+    margin: 0.83em auto;
+}
+
+.code {
+    font-weight: 300;
+}
+
+.table {
+    border: 4px sienna solid;
+    margin: 0 auto;
+}
+
+.table-head-data {
+    background-color: papayawhip;
+    padding: 5px;
+}
+
+.table-body-data{
+    text-align: left;
+    border-bottom: 1px sienna solid;
+    border-top: 1px sienna solid;
+    padding: 5px 10px;
+}
